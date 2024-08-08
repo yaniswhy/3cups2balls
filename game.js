@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (points <= 1) break;
                     points = roundToTwoDecimals(points - 1);
                     roundsPlayed += 1;
-                    outcomes.push({ round: roundsPlayed, choice: -1, points: points });
+                    outcomes.push({ round: roundsPlayed, choice: 0, points: points });
                     gameTableBody.innerHTML += `
                         <tr>
                             <td>${roundsPlayed}</td>
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 continue;
             }
 
-            const cups = [winningMultiplier, winningMultiplier, -1];
+            const cups = [winningMultiplier, winningMultiplier, 0];
             const choice = cups[Math.floor(Math.random() * cups.length)];
             points = roundToTwoDecimals(points + choice);
             outcomes.push({ round: roundsPlayed, choice: choice, points: points });

@@ -114,6 +114,7 @@ img
         margin-left: 15px;
         display: block;
         width: 80px;
+        margin-bottom: 10px;
     }
 .body {
     flex-direction: column;
