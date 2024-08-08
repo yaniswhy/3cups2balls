@@ -1,5 +1,5 @@
 
-body {
+.body {
     display: flex;
     justify-content: space-between;
     font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    max-width: 95%;
 }
 h2 {
     margin-top: 0;
@@ -86,9 +87,9 @@ th, td {
     height: 400px;
 }
 .notification {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     padding: 10px;
     background-color: #f0ad4e;
     color: white;
@@ -102,9 +103,19 @@ th, td {
     opacity: 0;
     visibility: hidden;
 }
+img 
+{
+    display: none;
+}
 
 @media screen and (max-width: 1024px) {
-body {
+    img
+    {
+        margin-left: 15px;
+        display: block;
+        width: 80px;
+    }
+.body {
     flex-direction: column;
     padding: 10px;
 }
